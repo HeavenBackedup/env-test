@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="loginService">
+ <resultMap id="login_map" class="com.env.test.model.po.Login">
+  <result property="id" column="id" jdbcType="INTEGER"></result>
+  <result property="account" column="account" jdbcType="VARCHAR"></result>
+  <result property="password" column="password" jdbcType="VARCHAR"></result>
+  <result property="isDelete" column="isDelete" jdbcType="INTEGER"></result>
+ </resultMap>
+
+ <insert id="insert_login" >
+  INSERT INTO login (`account`,`password`,`is_delete`) VALUES (#account#,#password#,0);
+ </insert>
+
+ <select id="login_check" parameterClass="com.env.test.model.po.Login" resultClass="java.lang.Integer">
+  SELECT COUNT(*) FROM login WHERE account=#account# and password=#password# and is_delete=0 limit 1;
+ </select>
+</sqlMap>

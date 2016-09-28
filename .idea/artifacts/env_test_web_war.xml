@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="env-test-web:war">
+    <output-path>$PROJECT_DIR$/evn-test-web/target</output-path>
+    <root id="archive" name="env-test-web-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="env-test-web:war exploded" />
+    </root>
+  </artifact>
+</component>
