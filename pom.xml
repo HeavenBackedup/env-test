@@ -65,7 +65,7 @@
     <modules>
         <module>env-test-model</module>
         <module>env-test-business</module>
-        <module>evn-test-web</module>
+        <module>env-test-web</module>
         <module>env-test-service</module>
     </modules>
 
